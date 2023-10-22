@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+:root{
+    --text-color: #000102;
+    --text-secodary-color: #606060;
+    --white-color: #fff;
+    --blue-color: #003697;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
