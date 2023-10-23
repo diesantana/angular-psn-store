@@ -141,8 +141,7 @@
     display: flex;
     justify-content: center;
     height: 50px;
-    width: 70%;
-    min-width: 555px;
+    width: 555px;
 }
 
 .store-list {
@@ -151,14 +150,16 @@
     align-items: center;
     padding: 0 .5rem;
 }
-.store-link{
+
+.store-link {
     display: block;
     padding: .15rem .6rem;
     font-weight: 600;
     border-radius: 2rem;
     transition: .7s;
 }
-.store-link:hover{
+
+.store-link:hover {
     background-color: #ecececc5;
 }
 
@@ -249,12 +250,23 @@
         transform: rotate(-135deg);
         top: -7px;
     }
+
     /* navbar store */
-    .store-container-list{
+    .store-container-list {
         justify-content: start;
         overflow-x: auto;
     }
+
     .store-list {
         padding: 0;
+    }
+}
+
+@media (max-width: 645px) {
+    .store-container-list {
+        display: flex;
+        justify-content: start;
+        height: 50px;
+        overflow-x: auto;
     }
 }
