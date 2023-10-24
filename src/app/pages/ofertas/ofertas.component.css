@@ -1,3 +1,31 @@
-p{
-    margin-top: 2rem;
+.ofertas-title{
+    font-weight: 300;
+    font-size: 2.25rem;
+    color: #363636;
+    margin: 1.5rem;
+}
+.container-contagem-itens{
+    margin: 1.5rem;
+}
+.text-contagem-itens{
+    font-size: .9rem;
+    color: var(--text-secondary-color);
+}
+.ofertas-list{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid red;
+    justify-content: space-around;
+    padding: 1rem;
+}
+.ofertas-item{
+    width: 200px;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px){
+    .ofertas-item{
+        /* width: 200px; */
+        margin-bottom: 1rem;
+    }
 }

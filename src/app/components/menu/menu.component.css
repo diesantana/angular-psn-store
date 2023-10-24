@@ -116,7 +116,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: .7rem 1rem;
+    padding: .4rem 1rem;
     background-color: var(--white-color);
     box-shadow: 4px 13px 25px -8px rgba(0, 0, 0, 0.18);
     -webkit-box-shadow: 4px 13px 25px -8px rgba(0, 0, 0, 0.18);
@@ -142,6 +142,7 @@
     justify-content: center;
     height: 50px;
     width: 540px;
+    margin: 0 auto;
 }
 
 .store-list {
@@ -162,57 +163,20 @@
 .store-link:hover {
     background-color: #ecececc5;
 }
-
-.scroll-btn {
-    position: absolute;
-    top: 43%;
-    border: 2px solid transparent;
-    background-color: #ffffff78;
-    height: 60px;
-    width: 40px;
-    cursor: pointer;
-    display: none;
-}
-.scroll-btn:hover{
-    border: 2px solid var(--blue-color);
-}
-
-.scroll-left-btn {
-    left: 7px;
-}
-
-.scroll-right-btn {
-    right: 7px;
-}
-.arrow-rigth {
-    background-color: #ffffff00;
-    position: absolute;
-    top: 40%;
-    left: 20%;
-    padding: 4px;
-    box-shadow: 1px -1px 0 1px #202020;
-    border: solid transparent;
-    border-width: 0 0 1px 1px;
-    transform: rotate(45deg);
-}
-
-.arrow-left {
-    background-color: #ffffff00;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    padding: 4px;
-    box-shadow: 1px -1px 0 1px #202020;
-    border: solid transparent;
-    border-width: 0 0 1px 1px;
-    transform: rotate(225deg);
-}
 .fixed-menu {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1001;
     /* Adicione outros estilos desejados quando o menu estiver "fixo" */
+  }
+
+
+/* espaçõ reservado */
+.fixed-menu-placeholder {
+    height: 75px; /* Ajuste para a altura do seu menu fixo */
+    display: none;
   }
   
 /* -------------------------------------------------------- media queries */
@@ -311,6 +275,11 @@
     .store-list {
         padding: 0;
     }
+    /* espaço reservado */
+    .fixed-menu-placeholder {
+        height: 140px; 
+        display: none;
+      }
 }
 
 @media (max-width: 645px) {

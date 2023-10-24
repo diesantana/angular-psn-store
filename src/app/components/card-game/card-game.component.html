@@ -1,0 +1,30 @@
+<div class="container-card">
+    <a href="#" class="link-container-card">
+        <div class="container-capa">
+            <img src="{{ imgCapa }}" alt="{{ imgAltCapa }}" class="img-capa">
+            <ul class="list-type-console">
+                <li *ngFor="let consoleItem of consoleList">{{ consoleItem }}</li>
+            </ul>
+        </div>
+
+        <div class="container-title">
+            <span class="product-type">{{ produtoType }}</span>
+            <h4 class="title-game" [innerHTML]="titleGame"></h4>
+        </div>
+
+        <div class="container-product-bloco">
+            <span class="icon-product-bloco">
+                <img src="../../../assets/icon-ps-bloco-pp.png" alt="Icone Dourado da PlayStation" class="img-icon-bloco">
+            </span>
+            <span class="text-product-bloco">{{ typeBloco }}</span>
+        </div>
+        
+        <div class="container-price">
+            <span class="badge-price">{{porcentagemPreco}}</span>
+            <div class="price">
+                <span class="price-now">{{precoAtual}}</span>
+                <span class="price-old">{{precoAnterior}}</span>
+            </div>
+        </div>
+    </a>
+</div>

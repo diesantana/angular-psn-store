@@ -1,0 +1,111 @@
+.container-card{
+    overflow: hidden;
+    position: relative;
+    z-index: 999;
+}
+.link-container-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: .2rem;
+}
+.link-container-card:hover .container-capa{
+    border: 3px solid var(--blue-color);
+}
+.container-capa{
+    display: flex;
+    width: 100%;
+    height: 60%;
+    padding: .1rem;
+    position: relative;
+    border-radius: .5rem;
+    border: 3px solid transparent;
+    transition: .5s;
+}
+.img-capa{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: .5rem;
+}
+/* console type */
+.list-type-console{
+    display: flex;
+    gap: .4rem;
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+}
+.list-type-console li{
+    width: 30px;
+    height: 15px;
+    border: 1px solid var(--white-color);
+    color: var(--white-color);
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* container tittle */
+.container-title{
+    margin-top: .2rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.product-type{
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--text-secondary-color);
+    vertical-align: top;
+}
+.title-game{
+    font-weight: 500;
+}
+/* cotainer bloco */
+.container-product-bloco{
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    padding-left: .2rem;
+}
+.img-icon-bloco{
+    width: 12px;
+}
+.text-product-bloco{
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+/* container price */
+.container-price{
+    margin-top: .2rem;
+}
+.badge-price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 23px;
+    font-size: .8rem;
+    font-weight: 600;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border-radius: .15rem;
+}
+.price{
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+.price-now{
+    font-weight: 400;
+}
+.price-old{
+    font-weight: 300;
+    text-decoration: line-through;
+    text-decoration-color: var(--text-secondary-color);
+}

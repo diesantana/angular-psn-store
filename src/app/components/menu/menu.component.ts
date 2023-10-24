@@ -10,16 +10,16 @@ export class MenuComponent implements OnInit {
   private menuElement!: HTMLElement; // Referência ao elemento HTML do menu
   private originalTopPosition!: number; // Posição original do menu em relação ao topo da página
 
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef) { }
 
   ngOnInit(): void {
-    // Obter a referência ao elemento do menu
+    // Obtém uma referência ao elemento do menu com a classe CSS navbar-store usando o ElementRef.
     this.menuElement = this.el.nativeElement.querySelector('.navbar-store');
 
-    // Obter a posição original do menu em relação ao topo da página
+    // Calcula a posição original do menu em relação ao topo da página, levando em consideração a rolagem atual da página.
     this.originalTopPosition = this.menuElement.getBoundingClientRect().top + window.scrollY;
 
-    // Adicionar um ouvinte de evento de rolagem para verificar a posição do menu
+    // Adiciona um ouvinte de evento de rolagem à janela (página) e chama a função checkMenuPosition sempre que a página é rolada.
     window.addEventListener('scroll', this.checkMenuPosition.bind(this));
   }
 
@@ -31,15 +31,23 @@ export class MenuComponent implements OnInit {
   private checkMenuPosition(): void {
     // Função para verificar a posição do menu durante a rolagem da página
 
-    const scrollY = window.scrollY || window.pageYOffset;
-    const threshold = this.originalTopPosition; // Ajuste conforme necessário
+    // Obtém a posição atual de rolagem da página, levando em consideração a compatibilidade com diferentes navegadores.
+    const scrollY = window.scrollY;
 
-    if (scrollY >= threshold) {
+    // Define um limiar (threshold) com base na posição original do menu. Ajustando ela você determina quando o menu deve ser fixado.
+    const threshold = this.originalTopPosition;
+
+    const placeholderElement: any = document.querySelector('.fixed-menu-placeholder');
+
+    if (scrollY >= threshold) { // Verifica se a posição atual de rolagem atingiu ou ultrapassou o limiar.
+      
       // Se o scroll atingir ou ultrapassar o limiar, aplique a classe CSS para fixar o menu no topo
       this.menuElement.classList.add('fixed-menu');
+      placeholderElement.style.display = 'block';
     } else {
       // Caso contrário, remova a classe CSS para restaurar a posição original do menu
       this.menuElement.classList.remove('fixed-menu');
+      placeholderElement.style.display = 'none';
     }
   }
 }
