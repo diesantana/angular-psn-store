@@ -5,9 +5,10 @@ import { Game } from 'src/app/shared/models/games.model';
 @Component({
   selector: 'app-ofertas',
   templateUrl: './ofertas.component.html',
-  styleUrls: ['./ofertas.component.css']
+  styleUrls: ['./ofertas.component.css', './ofertas.responsive.component.css']
 })
 export class OfertasComponent implements OnInit {
+  quantidadeItens!: number;
   gamesData: Game[] = [
     {
       img: '../../../assets/dead-space.jpg',
@@ -183,15 +184,14 @@ export class OfertasComponent implements OnInit {
       precoAtual: 'R$ 203,34',
       precoAnterior: 'R$ 338,90',
     },
-
-
-
-
   ];
+
   constructor(private serviceTitle: Title) { }
 
   ngOnInit(): void {
-    this.serviceTitle.setTitle('Ofertas | PlayStation Store')
+    this.serviceTitle.setTitle('Ofertas | PlayStation Store');
+    this.quantidadeItens = this.gamesData.length;
+    console.log(this.quantidadeItens);
   }
 
 }

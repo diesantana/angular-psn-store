@@ -1,10 +1,10 @@
 <div class="container-ofertas">
     <h1 class="ofertas-title">Todas as ofertas</h1>
     <div class="container-contagem-itens">
-        <span class="text-contagem-itens">3362 itens</span>
+        <span class="text-contagem-itens">{{quantidadeItens}} itens</span>
     </div>
 
-    <ul class="ofertas-list">
+    <ul class="ofertas-list" #ofertasList>
         <li class="ofertas-item" *ngFor="let game of gamesData">
             <app-card-game [gameData]="game"></app-card-game>
         </li>

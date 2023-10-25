@@ -1,0 +1,100 @@
+.container-footer{
+    background-color: #003697;
+    padding: .4rem 2.5rem;
+}
+/* containter logo */
+.footer-content-logo{
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer-container-logo{
+    display: flex;
+    width: 70px;
+    height: 50px;
+    align-items: center;
+}
+.footer-logo-img{
+    width: 40px;
+}
+.footer-container-internet{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.footer-container-internet img{
+    margin-top: .5rem;
+    width: 25px;
+}
+.footer-container-internet span{
+    color: var(--white-color);
+}
+/* container listas */
+.footer-content-list{
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+.service-list, .sobre-list, .social-list{
+    padding: 0 1.2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+.footer-content-list a{
+    color: var(--white-color);
+    transition: .5s;
+    opacity: 1;
+    font-size: 0.875rem;
+}
+.footer-content-list a:hover{
+    opacity: .7;
+}
+.footer-copyright{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+.footer-copyright span{
+    font-size: 0.875rem;
+    color: var(--white-color);
+}
+/* footer sony */
+.navbar-sony {
+    background-color: var(--black-color);
+    height: 35px;
+    display: none;
+    align-items: center;
+    justify-content: end;
+}
+
+.navbar-sony-link-logo {
+    margin-right: .5rem;
+}
+
+.navbar-sony-img-logo {
+    width: 80px;
+}
+
+@media (max-width: 832px) {
+    .footer-content-logo{
+        flex-direction: column;
+    }
+    .footer-container-internet, .footer-container-logo{
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .navbar-sony {
+        display: flex;
+    }
+}

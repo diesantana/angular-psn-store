@@ -1,0 +1,23 @@
+/* MEDIA QUERIES */
+@media (max-width: 472px) {
+    .ofertas-item {
+        width: 100%;
+    }
+    .ofertas-title, .container-contagem-itens{
+        padding: 1rem;
+    }
+}
+@media (max-width: 571px) {
+    .ofertas-list {
+        justify-content: space-between;
+        padding: 2rem;
+    }
+    .ofertas-title, .container-contagem-itens {
+        padding: 1rem;
+    }
+}
+@media (min-width: 1400px) {
+    .ofertas-list li:last-child {
+        margin-right: 303px;
+    }
+}

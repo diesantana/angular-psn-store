@@ -12,7 +12,7 @@
             <h4 class="title-game" [innerHTML]="gameData.title"></h4>
         </div>
 
-        <div class="container-product-bloco">
+        <div class="container-product-bloco" *ngIf="gameData.produtoBloco">
             <span class="icon-product-bloco">
                 <img src="../../../assets/icon-ps-bloco-pp.png" alt="Icone Dourado da PlayStation" class="img-icon-bloco">
             </span>

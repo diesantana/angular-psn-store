@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { OfertasComponent } from './pages/ofertas/ofertas.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { CardGameComponent } from './components/card-game/card-game.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { CardGameComponent } from './components/card-game/card-game.component';
     OfertasComponent,
     MenuComponent,
     CardGameComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
