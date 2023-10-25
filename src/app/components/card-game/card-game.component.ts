@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Game } from 'src/app/shared/models/games.model';
 
 @Component({
   selector: 'app-card-game',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-game.component.css']
 })
 export class CardGameComponent implements OnInit {
+  @Input() gameData!: Game;
+
   imgCapa: string = '../../../assets/the-crew-cross-gen.jpg';
   imgAltCapa: string = 'Capa do game The Crew Motorfest';
   consoleList: string[] = ['PS5', 'PS4'];

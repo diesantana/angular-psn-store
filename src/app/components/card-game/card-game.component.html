@@ -1,29 +1,29 @@
 <div class="container-card">
     <a href="#" class="link-container-card">
         <div class="container-capa">
-            <img src="{{ imgCapa }}" alt="{{ imgAltCapa }}" class="img-capa">
+            <img src="{{ gameData.img }}" alt="{{ gameData.altImg }}" class="img-capa">
             <ul class="list-type-console">
-                <li *ngFor="let consoleItem of consoleList">{{ consoleItem }}</li>
+                <li *ngFor="let consoleItem of gameData.plataforma">{{ consoleItem }}</li>
             </ul>
         </div>
 
         <div class="container-title">
-            <span class="product-type">{{ produtoType }}</span>
-            <h4 class="title-game" [innerHTML]="titleGame"></h4>
+            <span class="product-type">{{ gameData.produtoType}}</span>
+            <h4 class="title-game" [innerHTML]="gameData.title"></h4>
         </div>
 
         <div class="container-product-bloco">
             <span class="icon-product-bloco">
                 <img src="../../../assets/icon-ps-bloco-pp.png" alt="Icone Dourado da PlayStation" class="img-icon-bloco">
             </span>
-            <span class="text-product-bloco">{{ typeBloco }}</span>
+            <span class="text-product-bloco">{{ gameData.produtoBloco}}</span>
         </div>
         
         <div class="container-price">
-            <span class="badge-price">{{porcentagemPreco}}</span>
+            <span class="badge-price">{{gameData.porcentagem}}</span>
             <div class="price">
-                <span class="price-now">{{precoAtual}}</span>
-                <span class="price-old">{{precoAnterior}}</span>
+                <span class="price-now">{{gameData.precoAtual}}</span>
+                <span class="price-old">{{gameData.precoAnterior}}</span>
             </div>
         </div>
     </a>

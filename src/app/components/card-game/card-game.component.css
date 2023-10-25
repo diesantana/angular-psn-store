@@ -2,13 +2,16 @@
     overflow: hidden;
     position: relative;
     z-index: 999;
+    /* height: 335px; */
 }
 .link-container-card{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: .2rem;
+    background-color: rgb(247, 247, 246);
 }
 .link-container-card:hover .container-capa{
     border: 3px solid var(--blue-color);
@@ -95,6 +98,7 @@
     background-color: var(--black-color);
     color: var(--white-color);
     border-radius: .15rem;
+    margin-bottom: .5rem;
 }
 .price{
     display: flex;

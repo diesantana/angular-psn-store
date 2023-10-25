@@ -163,6 +163,7 @@
 .store-link:hover {
     background-color: #ecececc5;
 }
+
 .fixed-menu {
     position: fixed;
     top: 0;
@@ -170,15 +171,16 @@
     right: 0;
     z-index: 1001;
     /* Adicione outros estilos desejados quando o menu estiver "fixo" */
-  }
+}
 
 
 /* espaçõ reservado */
 .fixed-menu-placeholder {
-    height: 75px; /* Ajuste para a altura do seu menu fixo */
+    height: 60px;
+    /* Ajuste para a altura do seu menu fixo */
     display: none;
-  }
-  
+}
+
 /* -------------------------------------------------------- media queries */
 @media (max-width: 768px) {
     .navbar-ps {
@@ -275,11 +277,12 @@
     .store-list {
         padding: 0;
     }
+
     /* espaço reservado */
     .fixed-menu-placeholder {
-        height: 140px; 
+        height: 140px;
         display: none;
-      }
+    }
 }
 
 @media (max-width: 645px) {

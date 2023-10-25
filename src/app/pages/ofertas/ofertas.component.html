@@ -5,35 +5,9 @@
     </div>
 
     <ul class="ofertas-list">
-        <li class="ofertas-item">
-            <app-card-game></app-card-game>
+        <li class="ofertas-item" *ngFor="let game of gamesData">
+            <app-card-game [gameData]="game"></app-card-game>
         </li>
-        <li class="ofertas-item">
-            <app-card-game></app-card-game>
-        </li>
-        <li class="ofertas-item">
-            <app-card-game></app-card-game>
-        </li>
-        <li class="ofertas-item">
-            <app-card-game></app-card-game>
-        </li>
-        <li class="ofertas-item">
-            <app-card-game></app-card-game>
-        </li>
-        <li class="ofertas-item">
-            <app-card-game></app-card-game>
-        </li>
-        <li class="ofertas-item">
-            <app-card-game></app-card-game>
-        </li>
-        <li class="ofertas-item">
-            <app-card-game></app-card-game>
-        </li>
-        <li class="ofertas-item">
-            <app-card-game></app-card-game>
-        </li>
-        <li class="ofertas-item">
-            <app-card-game></app-card-game>
-        </li>
+  
     </ul>
 </div>
