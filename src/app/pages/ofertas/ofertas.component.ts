@@ -191,7 +191,6 @@ export class OfertasComponent implements OnInit {
   ngOnInit(): void {
     this.serviceTitle.setTitle('Ofertas | PlayStation Store');
     this.quantidadeItens = this.gamesData.length;
-    console.log(this.quantidadeItens);
   }
 
 }
